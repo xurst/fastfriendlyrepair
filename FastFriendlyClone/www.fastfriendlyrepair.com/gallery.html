@@ -40,7 +40,15 @@
 
 
 
-
+<style>
+  /* Target just this gallery by its widget ID to avoid side-effects */
+  #dm #1137804461 .dmPhotoGalleryHolder { display: block !important; }
+  #dm #1137804461 .photoGalleryThumbs img { display: inline !important; }
+  /* Prevent the JS pattern that uses background-image instead of <img> */
+  #dm #1137804461 .photoGalleryThumbs .image-container a {
+    background-image: none !important;
+  }
+</style>
 
 
 <script type="text/javascript">
@@ -2031,6 +2039,19 @@ requestAnimationFrame(() => {
         </div>
 
     </div>
+
+<style>
+  /* Scope to just the Gallery page to avoid side effects elsewhere */
+  body[data-page-alias="gallery"] [id="1137804461"] .dmPhotoGalleryHolder { 
+    display: block !important; 
+  }
+  body[data-page-alias="gallery"] [id="1137804461"] .photoGalleryThumbs img { 
+    display: inline !important; 
+  }
+  body[data-page-alias="gallery"] [id="1137804461"] .photoGalleryThumbs .image-container a {
+    background-image: none !important;
+  }
+</style>
 
 </div>
 <div id="fb-root"
